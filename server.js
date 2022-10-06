@@ -1,6 +1,3 @@
-const baseURL = "OpenWeatherMap.org?";
-const apiKey = "3b3adb3dcd7d0f29d88caa8c401cbae4&units=imperial";
-
 // Require Express to run server and routes
 const express = require("express");
 const cors = require("cors");
@@ -22,13 +19,10 @@ app.use(express.static("website"));
 
 // Setup Server
 const server = app.listen(port, () => {
-    console.log(`server is running at:localhost:${port}`);
+  console.log(`server is running at:localhost:${port}`);
 });
 app.get("/hello", (req, res) => {
   res.send("Hello World");
 });
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
-app.get(
-  `https://api.${baseURL}/data/2.5/weather?zip=12523,&appid=${apiKey}`
-);
+ projectData = {};

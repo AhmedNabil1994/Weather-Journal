@@ -9,15 +9,16 @@ let newDate = `${d.getMonth()}.${d.getDate()}.${d.getFullYear()}`;
 
 document.getElementById("generate").addEventListener("click", performAction);
 function performAction() {
-  getApiData(baseURL, apiKey);
+  const zipCode = document.getElementById("zip").value;
+  getApiData(baseURL, apiKey, zipCode);
 }
-const getApiData = async (baseURL, apiKey) => {
+const getApiData = async (baseURL, apiKey, zipCode) => {
   const request = await fetch(
-    `https://api.${baseURL}/data/2.5/weather?zip=12523,&appid=${apiKey}`
+    `https://api.${baseURL}/data/2.5/weather?zip=${zipCode},&appid=${apiKey}`
   );
   try {
     const data = await request.json();
-    console.log(data);
+    console.log("fetched data", data);
     return data;
   } catch (error) {
     console.log("error", error);
