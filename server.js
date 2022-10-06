@@ -25,4 +25,15 @@ app.get("/hello", (req, res) => {
   res.send("Hello World");
 });
 // Setup empty JS object to act as endpoint for all routes
- projectData = {};
+projectData = {};
+app.post("/projectData", (req, res) => {
+  projectData = {
+    apiData: req.body.apiData,
+    content: req.body.content,
+    date: req.body.date,
+    temperature: req.body.temperature,
+    zipCode: req.body.zipCode,
+  };
+  res.send(projectData);
+  console.log("All data:",projectData);
+});
