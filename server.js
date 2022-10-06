@@ -1,3 +1,5 @@
+// Setup empty JS object to act as endpoint for all routes
+projectData = {};
 // Require Express to run server and routes
 const express = require("express");
 const cors = require("cors");
@@ -17,8 +19,7 @@ app.use(express.static("website"));
 const server = app.listen(port, () => {
   console.log(`server is running at:localhost:${port}`);
 });
-// Setup empty JS object to act as endpoint for all routes
-projectData = {};
+
 app.post("/projectData", (req, res) => {
   projectData = {
     apiData: req.body.apiData,

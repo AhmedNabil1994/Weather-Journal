@@ -1,10 +1,32 @@
-# Weather-Journal App Project
+# Weather Journal Application
 
-## Overview
+## Table of contents
+* [Project Description](#project-description)
+* [Project Files](#project-files)
+* [Built with](#built-with)
+* [Project Usage](#project-usage)
+* [Project Dependencies](#project-dependencies)
+## Project Description
 This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
+## Project Files
+- website directory
+    - index.html 
+    - styles.css
+    - app.js
+- server.js
+- README.md
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+## Built With
+* HTML
+* CSS
+* JavaScript
+* Node.js
+
+## Project Usage
+This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also.
+
+## Project Dependencies
+* Express framework.
+* body-parser.
+* cors.

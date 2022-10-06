@@ -58,10 +58,10 @@ const updateUI = async () => {
   try {
     const allData = await req.json();
     console.log("Data retreived from the server:", allData);
-    document.getElementById("date").innerHTML = `Date is ${allData.date}`;
-    document.getElementById("temp").innerHTML = `Temperature is ${Math.round(allData.temperature)} degrees`;
-    document.getElementById("content").innerHTML = `It is ${allData.content}`;
-    document.getElementById("weather").innerHTML = `Weather description is ${allData.apiData.weather[0].description}`;
+    document.getElementById("date").innerHTML = `Date is ${allData.date}.`;
+    document.getElementById("temp").innerHTML = `Temperature is ${Math.round(allData.temperature)} degrees.`;
+    document.getElementById("content").innerHTML = `It is ${allData.content}.`;
+    document.getElementById("weather").innerHTML = `Weather description is ${allData.apiData.weather[0].description}.`;
   } catch (error) {
     console.log("error", error);
   }
